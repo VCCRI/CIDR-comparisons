@@ -1,0 +1,225 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf0 \CocoaLigature0 Last login: Mon Jul 11 10:46:56 on ttys000\
+Paulys-MBP:~ paulyLin$ python\
+Python 2.7.11 (v2.7.11:6d1b6a68f775, Dec  5 2015, 12:54:16) \
+[GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin\
+Type "help", "copyright", "credits" or "license" for more information.\
+>>> from datetime import datetime\
+>>> from ZIFA import ZIFA\
+>>> from ZIFA import block_ZIFA\
+>>> import numpy\
+>>> Y=numpy.loadtxt("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Codes/Pancreatic/Results/forZifa.csv",delimiter=",",skiprows=1)\
+>>> startTime = datetime.now()\
+>>> Z4, model_params = block_ZIFA.fitModel(Y, 4)\
+Filtering out all genes which are zero in more than 95.0% of samples. To change this, change p0_thresh.\
+Warning: your Y matrix contains genes which are frequently zero. If the algorithm fails to converge, try filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA.\
+Number of blocks has been set to 217\
+Running block zero-inflated factor analysis with N = 60, D = 108939, K = 4, n_blocks = 217\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 507]\
+/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/ZIFA/block_ZIFA.py:219: RuntimeWarning: invalid value encountered in sqrt\
+  sigmas = np.atleast_2d(np.sqrt(sigmas / N)).transpose()\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.950; now lowering that to 0.902 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 96096 genes\
+Number of blocks has been set to 192\
+Running block zero-inflated factor analysis with N = 60, D = 96096, K = 4, n_blocks = 192\
+Block sizes [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 596]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.900; now lowering that to 0.855 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 83963 genes\
+Number of blocks has been set to 167\
+Running block zero-inflated factor analysis with N = 60, D = 83963, K = 4, n_blocks = 167\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 631]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.850; now lowering that to 0.807 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 72765 genes\
+Number of blocks has been set to 145\
+Running block zero-inflated factor analysis with N = 60, D = 72765, K = 4, n_blocks = 145\
+Block sizes [501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 621]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.800; now lowering that to 0.760 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 63173 genes\
+Number of blocks has been set to 126\
+Running block zero-inflated factor analysis with N = 60, D = 63173, K = 4, n_blocks = 126\
+Block sizes [501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 548]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.750; now lowering that to 0.712 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 54598 genes\
+Number of blocks has been set to 109\
+Running block zero-inflated factor analysis with N = 60, D = 54598, K = 4, n_blocks = 109\
+Block sizes [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 598]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.700; now lowering that to 0.665 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 46937 genes\
+Number of blocks has been set to 93\
+Running block zero-inflated factor analysis with N = 60, D = 46937, K = 4, n_blocks = 93\
+Block sizes [504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 504, 569]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.650; now lowering that to 0.617 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 42321 genes\
+Number of blocks has been set to 84\
+Running block zero-inflated factor analysis with N = 60, D = 42321, K = 4, n_blocks = 84\
+Block sizes [503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 572]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.617; now lowering that to 0.586 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 38196 genes\
+Number of blocks has been set to 76\
+Running block zero-inflated factor analysis with N = 60, D = 38196, K = 4, n_blocks = 76\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 546]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.583; now lowering that to 0.554 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 34553 genes\
+Number of blocks has been set to 69\
+Running block zero-inflated factor analysis with N = 60, D = 34553, K = 4, n_blocks = 69\
+Block sizes [500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 500, 553]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.550; now lowering that to 0.522 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 31122 genes\
+Number of blocks has been set to 62\
+Running block zero-inflated factor analysis with N = 60, D = 31122, K = 4, n_blocks = 62\
+Block sizes [501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 561]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.517; now lowering that to 0.491 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 27880 genes\
+Number of blocks has been set to 55\
+Running block zero-inflated factor analysis with N = 60, D = 27880, K = 4, n_blocks = 55\
+Block sizes [506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 506, 556]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.483; now lowering that to 0.459 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 24942 genes\
+Number of blocks has been set to 49\
+Running block zero-inflated factor analysis with N = 60, D = 24942, K = 4, n_blocks = 49\
+Block sizes [509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 510]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.450; now lowering that to 0.427 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 22111 genes\
+Number of blocks has been set to 44\
+Running block zero-inflated factor analysis with N = 60, D = 22111, K = 4, n_blocks = 44\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 525]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.417; now lowering that to 0.396 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 19376 genes\
+Number of blocks has been set to 38\
+Running block zero-inflated factor analysis with N = 60, D = 19376, K = 4, n_blocks = 38\
+Block sizes [509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 509, 543]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.383; now lowering that to 0.364 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 16865 genes\
+Number of blocks has been set to 33\
+Running block zero-inflated factor analysis with N = 60, D = 16865, K = 4, n_blocks = 33\
+Block sizes [511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 513]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.350; now lowering that to 0.332 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 14570 genes\
+Number of blocks has been set to 29\
+Running block zero-inflated factor analysis with N = 60, D = 14570, K = 4, n_blocks = 29\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 514]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.317; now lowering that to 0.301 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 13599 genes\
+Number of blocks has been set to 27\
+Running block zero-inflated factor analysis with N = 60, D = 13599, K = 4, n_blocks = 27\
+Block sizes [503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 521]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.300; now lowering that to 0.285 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 12683 genes\
+Number of blocks has been set to 25\
+Running block zero-inflated factor analysis with N = 60, D = 12683, K = 4, n_blocks = 25\
+Block sizes [507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 507, 515]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.283; now lowering that to 0.269 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 11780 genes\
+Number of blocks has been set to 23\
+Running block zero-inflated factor analysis with N = 60, D = 11780, K = 4, n_blocks = 23\
+Block sizes [512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 512, 516]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.267; now lowering that to 0.253 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 10886 genes\
+Number of blocks has been set to 21\
+Running block zero-inflated factor analysis with N = 60, D = 10886, K = 4, n_blocks = 21\
+Block sizes [518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 518, 526]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.250; now lowering that to 0.237 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 10039 genes\
+Number of blocks has been set to 20\
+Running block zero-inflated factor analysis with N = 60, D = 10039, K = 4, n_blocks = 20\
+Block sizes [501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 501, 520]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.233; now lowering that to 0.222 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 9208 genes\
+Number of blocks has been set to 18\
+Running block zero-inflated factor analysis with N = 60, D = 9208, K = 4, n_blocks = 18\
+Block sizes [511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 511, 521]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.217; now lowering that to 0.206 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 8421 genes\
+Number of blocks has been set to 16\
+Running block zero-inflated factor analysis with N = 60, D = 8421, K = 4, n_blocks = 16\
+Block sizes [526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 526, 531]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.200; now lowering that to 0.190 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 7713 genes\
+Number of blocks has been set to 15\
+Running block zero-inflated factor analysis with N = 60, D = 7713, K = 4, n_blocks = 15\
+Block sizes [514, 514, 514, 514, 514, 514, 514, 514, 514, 514, 514, 514, 514, 514, 517]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.183; now lowering that to 0.174 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 7030 genes\
+Number of blocks has been set to 14\
+Running block zero-inflated factor analysis with N = 60, D = 7030, K = 4, n_blocks = 14\
+Block sizes [502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 502, 504]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.167; now lowering that to 0.158 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 6274 genes\
+Number of blocks has been set to 12\
+Running block zero-inflated factor analysis with N = 60, D = 6274, K = 4, n_blocks = 12\
+Block sizes [522, 522, 522, 522, 522, 522, 522, 522, 522, 522, 522, 532]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.150; now lowering that to 0.142 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 5535 genes\
+Number of blocks has been set to 11\
+Running block zero-inflated factor analysis with N = 60, D = 5535, K = 4, n_blocks = 11\
+Block sizes [503, 503, 503, 503, 503, 503, 503, 503, 503, 503, 505]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.133; now lowering that to 0.127 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 4954 genes\
+Number of blocks has been set to 9\
+Running block zero-inflated factor analysis with N = 60, D = 4954, K = 4, n_blocks = 9\
+Block sizes [550, 550, 550, 550, 550, 550, 550, 550, 554]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.117; now lowering that to 0.111 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 4306 genes\
+Number of blocks has been set to 8\
+Running block zero-inflated factor analysis with N = 60, D = 4306, K = 4, n_blocks = 8\
+Block sizes [538, 538, 538, 538, 538, 538, 538, 540]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.100; now lowering that to 0.095 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 3715 genes\
+Number of blocks has been set to 7\
+Running block zero-inflated factor analysis with N = 60, D = 3715, K = 4, n_blocks = 7\
+Block sizes [530, 530, 530, 530, 530, 530, 535]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.083; now lowering that to 0.079 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 3102 genes\
+Number of blocks has been set to 6\
+Running block zero-inflated factor analysis with N = 60, D = 3102, K = 4, n_blocks = 6\
+Block sizes [517, 517, 517, 517, 517, 517]\
+Error: algorithm failed to converge. Usual solutions to this problem: filtering out genes which are zero more than 80 - 90% of the time, or using standard ZIFA. Automatically retrying ZIFA when filtering out genes.\
+Previously, maximum fraction of zeros for a gene was 0.067; now lowering that to 0.063 and rerunning ZIFA\
+After filtering out genes with too many zeros, 60 samples and 2596 genes\
+Number of blocks has been set to 5\
+Running block zero-inflated factor analysis with N = 60, D = 2596, K = 4, n_blocks = 5\
+Block sizes [519, 519, 519, 519, 520]\
+Param change below threshold 1.000e-02 after 1 iterations\
+>>> print datetime.now() - startTime\
+0:40:08.280524\
+>>> numpy.savetxt("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Codes/Pancreatic/Results/Z4.csv",Z4,delimiter=",")\
+>>> X=Y\
+>>> \
+>>> \
+}
