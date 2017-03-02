@@ -1,4 +1,4 @@
-## Make the folder brain_mouse the working directory. 
+## Make the folder Mouse_Brain the working directory. 
 
 ## Install packages NbClust, cidr, tsne.
 library(NbClust)
@@ -199,7 +199,7 @@ ARI_zifa <- adjustedRandIndex(clusters_zifa,cell_types)
 ARI_zifa
 ## 0.3228093
 
-## file.remove("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Revision/Mouse_Brain/Results/forZifa.csv")
+## file.remove("Results/forZifa.csv")
 
 #################
 ## RaceID #######

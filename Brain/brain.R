@@ -204,7 +204,7 @@ ARI_zifa <- adjustedRandIndex(clusters_zifa,cols)
 ARI_zifa
 ##  0.5349539
 
-## file.remove("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Codes/Brain/Results/forZifa.csv")
+## file.remove("Results/forZifa.csv")
 
 #################
 ## RaceID #######

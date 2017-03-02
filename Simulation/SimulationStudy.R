@@ -173,7 +173,7 @@ ARI_ZIFA <- adjustedRandIndex(clusters_zifa,cols)
 ARI_ZIFA
 ## -0.002382703
 
-## file.remove("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Codes/Simulation/results/forZifa.csv")
+## file.remove("results/forZifa.csv")
 
 plot(Z2[,c(1,2)], col=cols, pch=clusters_zifa, main="ZIFA", xlab="PC1", ylab="PC2")
 

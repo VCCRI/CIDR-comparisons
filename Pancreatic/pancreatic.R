@@ -176,7 +176,7 @@ ARI_zifa <- adjustedRandIndex(clusters_zifa,cols)
 ARI_zifa
 # 0.2046189
 
-## file.remove("/Users/paulyLin/Dropbox/CIDR_paper/manuscript/Codes/Pancreatic/Results/forZifa.csv")
+## file.remove("/Results/forZifa.csv")
 
 #################
 ## RaceID #######
